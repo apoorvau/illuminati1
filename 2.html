@@ -1,52 +1,57 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Welcome to Verizon </title>
-
-
-</head>
-<body >
-
-<form name="signup" >
-<h1>Welcome to Verizon</h1>
-   Customer Name:<br>
-  <input type="text" name="Customer Name"><br><br>
-   Phone Number:<br>
-  <input type="number" name="PhoneNumber" onblur="checkno()"><br><br>
-     Shipping Address:<br>
-  <input type="text" name="Shipping Address"><br><br>
-     E-mail:<br>
-  <input type="text" name="E-mail" onblur="checkmail()"><br><br>
-  Password:<br>
-  <input type="password" name="Password"><br><br>
-  Confirm Password:<br>
-  <input type="password" name="ConfirmPassword"  ><br><br>
-  <input type="submit" value="Register" onclick="matchp()">
-  </form> 
-  <script>
-  function checkno() {
-				var num = document.signup.PhoneNumber.value;
-				if (!num.match(/^[0-9]{10}$/))
-					alert("Please enter 10 digit phone number");
-
-			}
-  function checkmail(){
-	  var email=document.signup.E-mail.value;
-	  atpos=email.IndexOf("@");
-	  dotpos=email.lastIndexOf(".");
-	  if(atpos<1||(dotos-atpos<2))
-      alert("Please enter correct E-mail ID");	  
-  }
-			function matchp() {
-				var ps = document.signup.Password.value;
-				var cps = document.signup.ConfirmPassword.value;
-				if (ps != cps)
-					alert("Password mismatch");
-				else
-					<a href="3.html"></a>
-			}
-		</script>
-
-</body>
-</html>
+<!DOCTYPE html> 
+<html> 
+ <head> 
+ <meta charset="ISO-8859-1"> 
+ <title>Welcome to Verizon </title> 
+ 
+ 
+ 
+ 
+ </head> 
+ <body > 
+ 
+ 
+<form name="signup"  action="homeUser.html"> 
+ <h1>Welcome to Verizon</h1> 
+ Customer ID:<br> 
+   <input type="text" name="CustomerId"><br><br> 
+    Customer Name:<br> 
+   <input type="text" name="Customer Name"><br><br> 
+    Phone Number:<br> 
+   <input type="number" name="PhoneNumber" onblur="checkno()"><br><br> 
+      Shipping Address:<br> 
+   <input type="text" name="Shipping Address"><br><br> 
+      E-mail:<br> 
+   <input type="text" name="E-mail" onblur="checkmail()"><br><br> 
+   Password:<br> 
+   <input type="password" name="Password"><br><br> 
+   Confirm Password:<br> 
+   <input type="password" name="ConfirmPassword"  ><br><br> 
+   <input type="submit" value="Register" onclick="matchp()"> 
+   </form>  
+   <script> 
+   function checkno() { 
+ 				var num = document.signup.PhoneNumber.value; 
+ 				if (!num.match(/^[0-9]{10}$/)) 
+ 					alert("Please enter 10 digit phone number"); 
+  
+ 			} 
+   function checkmail(){ 
+ 	  var email=document.signup.E-mail.value; 
+ 	  atpos=email.IndexOf("@"); 
+ 	  dotpos=email.lastIndexOf("."); 
+ 	  if(atpos<1||(dotos-atpos<2)) 
+       alert("Please enter correct E-mail ID");	   
+   } 
+ 			function matchp() { 
+ 				var ps = document.signup.Password.value; 
+ 				var cps = document.signup.ConfirmPassword.value; 
+ 				if (ps != cps) 
+ 					alert("Password mismatch"); 
+ 				else 
+ 					window.open('homeUser.html','_self');
+ 			} 
+ 		</script> 
+ 
+ </body> 
+ </html> 
