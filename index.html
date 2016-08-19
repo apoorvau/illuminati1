@@ -1,108 +1,107 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-
-
-	<!-- General meta information -->
-	<title>Login Form by Oussama Afellad</title>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<meta name="robots" content="index, follow" />
-	<meta charset="utf-8" />
-	<!-- // General meta information -->
-	
-	
-	<!-- Load Javascript -->
-	<script type="text/javascript" src="./js/jquery.js"></script>
-	<script type="text/javascript" src="./js/jquery.query-2.1.7.js"></script>
-	<script type="text/javascript" src="./js/rainbows.js"></script>
-	<!-- // Load Javascipt -->
-
-	<!-- Load stylesheets -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" media="screen" />
-	<!-- // Load stylesheets -->
-	
-<script>
-
-
-	$(document).ready(function(){
- 
-	$("#submit1").hover(
-	function() {
-	$(this).animate({"opacity": "0"}, "slow");
-	},
-	function() {
-	$(this).animate({"opacity": "1"}, "slow");
-	});
- 	});
-
-
-</script>
-	
+<title>Verizon Inventory Management System</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css" media="screen"
+	type="text/css" />
 </head>
+<body style="background-image: url(Images/th.jpg); " >
+
+<link rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+<br>
+<h2 style="color: white;">
+	<center>
+		<b><font size="15"> Inventory Management System </font></b>
+	</center>
+</h2>
+</head>
+
+
 <body>
 
-	<div id="wrapper">
-		<div id="wrappertop"></div>
 
-		<div id="wrappermiddle">
-
-			<h2>Login</h2>
-
-			<div id="username_input">
-
-				<div id="username_inputleft"></div>
-
-				<div id="username_inputmiddle">
-				<form>
-					<input type="text" name="link" id="url" value="E-mail Address" onclick="this.value = ''">
-					<img id="url_user" src="./images/mailicon.png" alt="">
-				</form>
-				</div>
-
-				<div id="username_inputright"></div>
-
-			</div>
-
-			<div id="password_input">
-
-				<div id="password_inputleft"></div>
-
-				<div id="password_inputmiddle">
-				<form>
-					<input type="password" name="link" id="url" value="Password" onclick="this.value = ''">
-					<img id="url_password" src="./images/passicon.png" alt="">
-				</form>
-				</div>
-
-				<div id="password_inputright"></div>
-
-			</div>
-
-			<div id="submit">
-				<form>
-				<input type="image" src="./images/submit_hover.png" id="submit1" value="Sign In">
-				<input type="image" src="./images/submit.png" id="submit2" value="Sign In">
-				</form>
-			</div>
+	<div class="container">
 
 
-			<div id="links_left">
+		<div id="login">
 
-			<a href="#">Forgot your Password?</a>
 
-			</div>
+			<form name="one"  method="get">
 
-			<div id="links_right"><a href="#">Not a Member Yet?</a></div>
+
+				<fieldset class="clearfix">
+<h3>Sign in as User</h3>
+
+					<p>
+						<span class="fontawesome-user"></span> 
+						User-name:<input type="text"
+							name="username" value="Username"
+							onBlur="if(this.value == '') this.value = 'Username'"
+							onFocus="if(this.value == 'Username') this.value = ''" required>
+					</p>
+					<!-- JS because of IE support; better: placeholder="Username" -->
+
+					<p>
+						<span class="fontawesome-lock"></span>
+						Password:<input type="password"
+							name="password" value="Password"
+							onBlur="if(this.value == '') this.value = 'Password'"
+							onFocus="if(this.value == 'Password') this.value = ''" required>
+					</p>
+					<!-- JS because of IE support; better: placeholder="Password" -->
+
+					<p class="login button">
+						<input type="submit" value="Sign in" onclick="go()"><br><br>
+						
+					</p>
+
+
+				</fieldset>
+
+
+			</form>
+
+
+			<p class="change_link">
+				Not a member? <a href="register123.html">Sign up now</a> <span
+					class="fontawesome-arrow-right"></span>
+			</p>
+
 
 		</div>
+		<!-- end login -->
 
-		<div id="wrapperbottom"></div>
-		
-		<div id="powered">
-		<p>Powered by <a href="http://www.premiumfreebies.eu">Premiumfreebies Control Panel</a></p>
-		</div>
 	</div>
+	<h3>Sign in as Admin</h3>
+	<form action="Admin">
+	Admin-name: <input type="text" name="username"> <br><br>
+	Password:<input type="text" name="password"> <br> <br>
+	<input type="submit" value="Sign In as Admin">
+	</form>
 
+
+	<script>
+		function go() {
+			var name = document.one.username.value;
+			var pass = document.one.password.value;
+
+			if (((name == "user1" || name == "user1@abc.com") && pass == "pass1")
+					|| ((name == "user2" || name == "user2@abc.com") && pass == "pass2")
+					|| ((name == "user3" || name == "user3@abc.com") && pass == "pass3")) {
+				window.open("storepage.html");
+			} 
+			
+				else {
+				
+				alert("Click Sign up to register with us.");
+
+			}
+		}
+	</script>
 </body>
 </html>
+
+
+

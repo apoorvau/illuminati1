@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<style>
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+</style>
+<meta charset="ISO-8859-1">
+
+<title>Welcome to Verizon </title>
+
+
+
+</head>
+
+
+<body >
+
+
+<div >
+
+<form name="signup" action="index.html">
+
+<div style="background-image: url(Images/images.jpg); background-size: 30%; background-position: center; background-repeat: no-repeat;">>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+<br>
+<div class="center">
+<h1>Welcome to Verizon</h1>
+   
+
+Customer Name:<br>
+  <input type="text" name="Customer Name" required="required"><br><br>
+   
+Phone Number:<br>
+  <input type="number" name="PhoneNumber"required="required"  onblur="checkno()"><br><br>
+     
+Shipping Address:<br>
+  <input type="text" name="Shipping Address" required="required" ><br><br>
+     
+E-mail:<br>
+  <input type="text" name="E-mail" required="required"  
+  onblur="checkmail(this.value)"><br><br>
+  
+Password:<br>
+  <input type="password" name="Password" required="required" ><br><br>
+  
+Confirm Password:<br>
+  <input type="password" name="ConfirmPassword" required="required"   ><br><br>
+  
+<input type="button" value="Validate" onclick="matchp()"><br><br>
+<input type="submit" value="Register">
+  
+</form> 
+  
+<script>
+  
+function checkno() {
+				var num = document.signup.PhoneNumber.value;
+				
+if (!num.match(/^[0-9]{10}$/))
+					alert("Please enter 10 digit phone number");
+
+			}
+  
+function checkmail(inputText)  
+{  
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+if(inputText.value.match(mailformat))  
+{  
+document.form1.text1.focus();  
+return true;  
+}  
+else  
+{  
+alert("You have entered an invalid email address!");  
+document.form1.text1.focus();  
+return false;  
+}  
+}
+
+/* function checkmail(){
+	   var email=document.signup.E-mail.value; 
+	  
+	  atpos=email.IndexOf("@");
+	  dotpos=email.lastIndexOf(".");
+	  if(atpos==0 || atpos==email.length() || dotpos==0 )  
+      alert("Please enter correct E-mail ID");	 
+	  if(email=="")
+		  alert(" E-mail ID left blank..");	 
+  } */
+			
+function matchp() {
+				var ps = document.signup.Password.value;
+				var cps = document.signup.ConfirmPassword.value;
+				
+if (ps != cps)
+					alert("Password mismatch");
+				
+else
+					alert("correct details entered..");
+			}
+		
+</script>
+
+
+</div>
+
+</body>
+
+</html>
